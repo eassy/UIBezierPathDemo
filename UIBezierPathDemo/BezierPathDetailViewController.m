@@ -8,6 +8,7 @@
 
 #import "BezierPathDetailViewController.h"
 #import "SimplePathView.h"
+#import "BrokenLinePathView.h"
 
 @interface BezierPathDetailViewController ()
 
@@ -38,6 +39,7 @@
     if (self) {
         self.hidesBottomBarWhenPushed = YES;
         self.title = navTitle;
+        self.pageType = pageType;
     }
     return self;
 }
@@ -87,7 +89,7 @@
             self.drawViewClass = [SimplePathView class];
             break;
         case BezierPathDetailTypeBrokenLine:
-            
+            self.drawViewClass = [BrokenLinePathView class];
             break;
         case BezierPathDetailTypeCurve:
             break;
