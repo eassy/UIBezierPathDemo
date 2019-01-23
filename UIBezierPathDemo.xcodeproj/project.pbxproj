@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		C448D1EF21F8086F000AEE4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D1EE21F8086F000AEE4B /* AppDelegate.m */; };
 		C448D1F221F8086F000AEE4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D1F121F8086F000AEE4B /* ViewController.m */; };
-		C448D1F521F8086F000AEE4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C448D1F321F8086F000AEE4B /* Main.storyboard */; };
 		C448D1F721F80871000AEE4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C448D1F621F80871000AEE4B /* Assets.xcassets */; };
 		C448D1FA21F80871000AEE4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C448D1F821F80871000AEE4B /* LaunchScreen.storyboard */; };
 		C448D1FD21F80871000AEE4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D1FC21F80871000AEE4B /* main.m */; };
 		C448D20721F80871000AEE4B /* UIBezierPathDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D20621F80871000AEE4B /* UIBezierPathDemoTests.m */; };
 		C448D21221F80871000AEE4B /* UIBezierPathDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D21121F80871000AEE4B /* UIBezierPathDemoUITests.m */; };
+		C448D22121F80BB0000AEE4B /* BezierPathDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D22021F80BB0000AEE4B /* BezierPathDetailViewController.m */; };
+		C448D22421F86432000AEE4B /* SimplePathView.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D22321F86432000AEE4B /* SimplePathView.m */; };
+		C448D22721F88358000AEE4B /* BrokenLinePathView.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D22621F88358000AEE4B /* BrokenLinePathView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 		C448D1EE21F8086F000AEE4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C448D1F021F8086F000AEE4B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C448D1F121F8086F000AEE4B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C448D1F421F8086F000AEE4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C448D1F621F80871000AEE4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C448D1F921F80871000AEE4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C448D1FB21F80871000AEE4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +52,12 @@
 		C448D20D21F80871000AEE4B /* UIBezierPathDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIBezierPathDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C448D21121F80871000AEE4B /* UIBezierPathDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIBezierPathDemoUITests.m; sourceTree = "<group>"; };
 		C448D21321F80871000AEE4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C448D21F21F80BB0000AEE4B /* BezierPathDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierPathDetailViewController.h; sourceTree = "<group>"; };
+		C448D22021F80BB0000AEE4B /* BezierPathDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierPathDetailViewController.m; sourceTree = "<group>"; };
+		C448D22221F86432000AEE4B /* SimplePathView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplePathView.h; sourceTree = "<group>"; };
+		C448D22321F86432000AEE4B /* SimplePathView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePathView.m; sourceTree = "<group>"; };
+		C448D22521F88358000AEE4B /* BrokenLinePathView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrokenLinePathView.h; sourceTree = "<group>"; };
+		C448D22621F88358000AEE4B /* BrokenLinePathView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrokenLinePathView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +112,13 @@
 				C448D1EE21F8086F000AEE4B /* AppDelegate.m */,
 				C448D1F021F8086F000AEE4B /* ViewController.h */,
 				C448D1F121F8086F000AEE4B /* ViewController.m */,
-				C448D1F321F8086F000AEE4B /* Main.storyboard */,
+				C448D21F21F80BB0000AEE4B /* BezierPathDetailViewController.h */,
+				C448D22021F80BB0000AEE4B /* BezierPathDetailViewController.m */,
 				C448D1F621F80871000AEE4B /* Assets.xcassets */,
 				C448D1F821F80871000AEE4B /* LaunchScreen.storyboard */,
 				C448D1FB21F80871000AEE4B /* Info.plist */,
 				C448D1FC21F80871000AEE4B /* main.m */,
+				C448D22821F88366000AEE4B /* PathView */,
 			);
 			path = UIBezierPathDemo;
 			sourceTree = "<group>";
@@ -130,6 +139,17 @@
 				C448D21321F80871000AEE4B /* Info.plist */,
 			);
 			path = UIBezierPathDemoUITests;
+			sourceTree = "<group>";
+		};
+		C448D22821F88366000AEE4B /* PathView */ = {
+			isa = PBXGroup;
+			children = (
+				C448D22221F86432000AEE4B /* SimplePathView.h */,
+				C448D22321F86432000AEE4B /* SimplePathView.m */,
+				C448D22521F88358000AEE4B /* BrokenLinePathView.h */,
+				C448D22621F88358000AEE4B /* BrokenLinePathView.m */,
+			);
+			path = PathView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +257,6 @@
 			files = (
 				C448D1FA21F80871000AEE4B /* LaunchScreen.storyboard in Resources */,
 				C448D1F721F80871000AEE4B /* Assets.xcassets in Resources */,
-				C448D1F521F8086F000AEE4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C448D22421F86432000AEE4B /* SimplePathView.m in Sources */,
 				C448D1F221F8086F000AEE4B /* ViewController.m in Sources */,
+				C448D22721F88358000AEE4B /* BrokenLinePathView.m in Sources */,
 				C448D1FD21F80871000AEE4B /* main.m in Sources */,
+				C448D22121F80BB0000AEE4B /* BezierPathDetailViewController.m in Sources */,
 				C448D1EF21F8086F000AEE4B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,14 +322,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C448D1F321F8086F000AEE4B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C448D1F421F8086F000AEE4B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C448D1F821F80871000AEE4B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8KY8X4895;
 				INFOPLIST_FILE = UIBezierPathDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8KY8X4895;
 				INFOPLIST_FILE = UIBezierPathDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
