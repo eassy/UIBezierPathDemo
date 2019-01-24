@@ -16,7 +16,9 @@ typedef NS_ENUM(NSUInteger, BezierPathDetailType) {
     /// 折线图
     BezierPathDetailTypeBrokenLine,
     /// 曲线图
-    BezierPathDetailTypeCurve
+    BezierPathDetailTypeCurve,
+    /// 使用 layer 与 path 结合
+    BezierPathDetailTypeShapeLayer
 };
 
 @interface BezierPathDetailViewController : UIViewController

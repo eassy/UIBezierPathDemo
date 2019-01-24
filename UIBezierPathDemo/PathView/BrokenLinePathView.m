@@ -26,6 +26,8 @@
         [brokenPath addLineToPoint:toPoint];
         lastPoint = toPoint;
     }
+    CGFloat a[] = {1,2};
+    [brokenPath setLineDash:a count:2 phase:0];
     brokenPath.lineWidth = 2;
     [[UIColor redColor] setStroke];//设置路径线的颜色
     [brokenPath stroke];//落实路径线的颜色

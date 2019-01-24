@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "BezierPathDetailViewController.h"
+#import "BezierPathThirdViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -74,7 +75,11 @@
 
 
 - (void)bindData {
-    NSArray *itemArray = @[@"Create a BezierPath",@"Create a Broken Path"];
+    NSArray *itemArray = @[@"Create a Simple Path",
+                           @"Create a Broken Path",
+                           @"Create a CurlLine Path",
+                           @"Path With ShapeLayer",
+                           @"Create a PieChat With BezierPath"];
     [self.items addObjectsFromArray:itemArray];
 }
 
@@ -106,6 +111,14 @@
         pageType = BezierPathDetailTypeCreateSimple;
     } else if (indexPath.row == 1) {
         pageType = BezierPathDetailTypeBrokenLine;
+    } else if (indexPath.row == 2) {
+        pageType = BezierPathDetailTypeCurve;
+    } else if (indexPath.row == 3) {
+        pageType = BezierPathDetailTypeShapeLayer;
+    } else if (indexPath.row == 4) {
+        BezierPathThirdViewController *thirdViewController = [[BezierPathThirdViewController alloc] init];
+        [self.navigationController pushViewController:thirdViewController animated:YES];
+        return;
     }
     BezierPathDetailViewController *pathDetailViewController = [[BezierPathDetailViewController alloc] initWithTitle:[self.items objectAtIndex:indexPath.row] pageType:pageType];
     [self.navigationController pushViewController:pathDetailViewController animated:YES];

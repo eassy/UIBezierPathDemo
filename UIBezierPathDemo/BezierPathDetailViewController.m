@@ -9,13 +9,16 @@
 #import "BezierPathDetailViewController.h"
 #import "SimplePathView.h"
 #import "BrokenLinePathView.h"
+#import "CurlLinePathView.h"
+#import "ShapeLayerWithPathView.h"
+#import "BasePathView.h"
 
 @interface BezierPathDetailViewController ()
 
 /**
  绘图view
  */
-@property (nonatomic, strong) UIView *drawView;
+@property (nonatomic, strong) BasePathView *drawView;
 
 /**
  
@@ -65,6 +68,7 @@
     [self setNav];
     [self addSubViews];
     [self setConstraints];
+    [self renderDrawView];
 }
 
 - (void)addSubViews {
@@ -74,6 +78,11 @@
 - (void)setConstraints {
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
     [self.drawView setFrame:CGRectMake(10, 100, screenSize.width - 20, 200)];
+}
+
+
+- (void)renderDrawView {
+    [self.drawView renderPath];
 }
 
 - (void)setNav {
@@ -92,6 +101,10 @@
             self.drawViewClass = [BrokenLinePathView class];
             break;
         case BezierPathDetailTypeCurve:
+            self.drawViewClass = [CurlLinePathView class];
+            break;
+        case BezierPathDetailTypeShapeLayer:
+            self.drawViewClass = [ShapeLayerWithPathView class];
             break;
         default:
             break;
@@ -109,7 +122,7 @@
 - (UIView *)drawView {
     if (!_drawView) {
         _drawView = [[self.drawViewClass alloc] init];
-        _drawView.backgroundColor = [UIColor whiteColor];
+//        _drawView.backgroundColor = [UIColor whiteColor];
     }
     return _drawView;
 }

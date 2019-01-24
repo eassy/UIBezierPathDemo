@@ -1,8 +1,8 @@
 //
-//  SimplePathView.h
+//  CurlLinePathView.h
 //  UIBezierPathDemo
 //
-//  Created by houwenjie on 2019/1/23.
+//  Created by houwenjie on 2019/1/24.
 //  Copyright © 2019 houwenjie. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SimplePathView : BasePathView
+@interface CurlLinePathView : BasePathView
 
 @end
 
