@@ -9,7 +9,7 @@
 #import "BezierPathThirdViewController.h"
 #import "HJPieChatView.h"
 
-@interface BezierPathThirdViewController ()
+@interface BezierPathThirdViewController () <HJPieChatViewDelegate>
 
 /**
  饼状图
@@ -95,6 +95,10 @@
 
 #pragma mark - customDelegates
 
+- (void)pieChatViewClickWithItemModel:(HJPieChatItemModel *)itemModel chatView:(HJPieChatView *)chatView {
+    [chatView reloadItemWithColor:[UIColor lightGrayColor] index:[chatView.chatItems indexOfObject:itemModel]];
+}
+
 #pragma mark - systemDelegates
 
 #pragma mark - getters and setters
@@ -102,6 +106,7 @@
 - (HJPieChatView *)pieChatView {
     if (!_pieChatView) {
         _pieChatView = [[HJPieChatView alloc] init];
+        _pieChatView.delegate = self;
     }
     return _pieChatView;
 }

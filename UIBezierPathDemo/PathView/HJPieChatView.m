@@ -66,7 +66,8 @@
     if (self.chatLayerArray.count < self.chatItems.count) {
         for (NSInteger i = self.chatLayerArray.count; i < self.chatItems.count ; i ++) {
             CAShapeLayer *itemShapeLayer = [[CAShapeLayer alloc] init];
-            itemShapeLayer.lineWidth = 0.5f;
+            itemShapeLayer.lineWidth = 0.01f;
+            itemShapeLayer.strokeColor = [UIColor clearColor].CGColor;
             [self.chatLayerArray addObject:itemShapeLayer];
             [self.layer addSublayer:itemShapeLayer];
         }
@@ -117,13 +118,37 @@
 }
 
 /**
- 重新绘制图表
+ 刷新某个 item
+ 
+ @param color 新的颜色
+ @param index 位置
  */
-- (void)reRenderChat {
+- (void)reloadItemWithColor:(UIColor *)color index:(NSInteger)index {
+    if (index >= self.chatItems.count) {
+        return;
+    }
+    HJPieChatItemModel *itemModel = [self.chatItems objectAtIndex:index];
+    itemModel.itemColor = color;
+    CAShapeLayer *itemLayer = [self.chatLayerArray objectAtIndex:index];
+    itemLayer.fillColor = color.CGColor;
     
 }
 
 #pragma mark - event handler
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    CGPoint point = [[touches anyObject] locationInView:self];
+    [self.chatLayerArray enumerateObjectsUsingBlock:^(CAShapeLayer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIBezierPath *path = [UIBezierPath bezierPathWithCGPath:obj.path];
+        BOOL isContain = [path containsPoint:point];
+        if (isContain) {
+            *stop = YES;
+            if ([self.delegate respondsToSelector:@selector(pieChatViewClickWithItemModel:chatView:)]) {
+                [self.delegate pieChatViewClickWithItemModel:[self.chatItems objectAtIndex:idx] chatView:self];
+            }
+        }
+    }];
+}
 
 #pragma mark - getters and setters
 

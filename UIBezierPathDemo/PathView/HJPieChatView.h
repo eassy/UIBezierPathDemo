@@ -11,6 +11,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class HJPieChatItemModel;
+@class HJPieChatView;
+
+@protocol HJPieChatViewDelegate <NSObject>
+
+- (void)pieChatViewClickWithItemModel:(HJPieChatItemModel *)itemModel chatView:(HJPieChatView *)chatView;
+
+@end
 
 @interface HJPieChatView : UIView
 
@@ -23,6 +30,11 @@ NS_ASSUME_NONNULL_BEGIN
  图表元素数组，赋值后调用 renderChat 会刷新
  */
 @property (nonatomic, strong) NSArray <HJPieChatItemModel *>*chatItems;
+
+/**
+ 代理
+ */
+@property (nonatomic, weak) id <HJPieChatViewDelegate> delegate;
 
 /**
  初始化
@@ -38,6 +50,14 @@ NS_ASSUME_NONNULL_BEGIN
  开始绘制图表
  */
 - (void)renderChat;
+
+/**
+ 刷新某个 item
+
+ @param color 新的颜色
+ @param index 位置
+ */
+- (void)reloadItemWithColor:(UIColor *)color index:(NSInteger)index;
 
 @end
 
