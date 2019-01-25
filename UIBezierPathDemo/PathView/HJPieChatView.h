@@ -15,12 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HJPieChatView : UIView
 
 /**
- 半径 重新赋值后会刷新
+ 半径 重新赋值后调用 renderChat 会刷新
  */
 @property (nonatomic, assign) CGFloat chatRadius;
 
 /**
- 图表元素数组，赋值后会刷新
+ 图表元素数组，赋值后调用 renderChat 会刷新
  */
 @property (nonatomic, strong) NSArray <HJPieChatItemModel *>*chatItems;
 
@@ -32,18 +32,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param frame frame
  @return instancetype
  */
-- (instancetype)initWithRadius:(CGFloat)radius chatItems:(NSArray *)chatItems frame:(CGRect)frame;
+- (instancetype)initWithRadius:(CGFloat)radius chatItems:(NSArray <HJPieChatItemModel *>*)chatItems frame:(CGRect)frame;
 
 /**
  开始绘制图表
  */
 - (void)renderChat;
-
-
-/**
- 重新绘制图表
- */
-- (void)reRenderChat;
 
 @end
 
