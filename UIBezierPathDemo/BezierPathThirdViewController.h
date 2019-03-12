@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DemoHeader.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BezierPathThirdViewController : UIViewController
+
+- (instancetype)initWithTitle:(NSString *)navTitle pageType:(BezierPathDetailType)pageType;
 
 @end
 

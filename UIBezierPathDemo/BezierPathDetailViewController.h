@@ -7,19 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DemoHeader.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-typedef NS_ENUM(NSUInteger, BezierPathDetailType) {
-    /// 简单的矩形
-    BezierPathDetailTypeCreateSimple,
-    /// 折线图
-    BezierPathDetailTypeBrokenLine,
-    /// 曲线图
-    BezierPathDetailTypeCurve,
-    /// 使用 layer 与 path 结合
-    BezierPathDetailTypeShapeLayer
-};
 
 @interface BezierPathDetailViewController : UIViewController
 

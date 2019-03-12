@@ -17,6 +17,7 @@
 		C448D22121F80BB0000AEE4B /* BezierPathDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D22021F80BB0000AEE4B /* BezierPathDetailViewController.m */; };
 		C448D22421F86432000AEE4B /* SimplePathView.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D22321F86432000AEE4B /* SimplePathView.m */; };
 		C448D22721F88358000AEE4B /* BrokenLinePathView.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D22621F88358000AEE4B /* BrokenLinePathView.m */; };
+		C4FA9ED421FEE6DE00124342 /* HJBrokenLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FA9ED321FEE6DE00124342 /* HJBrokenLineView.m */; };
 		C4FC991321F95A56006A2DDD /* CurlLinePathView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FC991221F95A56006A2DDD /* CurlLinePathView.m */; };
 		C4FC991621F97276006A2DDD /* ShapeLayerWithPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FC991521F97276006A2DDD /* ShapeLayerWithPathView.m */; };
 		C4FC991921F995DC006A2DDD /* BasePathView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FC991821F995DC006A2DDD /* BasePathView.m */; };
@@ -63,6 +64,9 @@
 		C448D22321F86432000AEE4B /* SimplePathView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePathView.m; sourceTree = "<group>"; };
 		C448D22521F88358000AEE4B /* BrokenLinePathView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrokenLinePathView.h; sourceTree = "<group>"; };
 		C448D22621F88358000AEE4B /* BrokenLinePathView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrokenLinePathView.m; sourceTree = "<group>"; };
+		C4FA9ED121FEE3AB00124342 /* DemoHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoHeader.h; sourceTree = "<group>"; };
+		C4FA9ED221FEE6DE00124342 /* HJBrokenLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJBrokenLineView.h; sourceTree = "<group>"; };
+		C4FA9ED321FEE6DE00124342 /* HJBrokenLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJBrokenLineView.m; sourceTree = "<group>"; };
 		C4FC991121F95A56006A2DDD /* CurlLinePathView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurlLinePathView.h; sourceTree = "<group>"; };
 		C4FC991221F95A56006A2DDD /* CurlLinePathView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurlLinePathView.m; sourceTree = "<group>"; };
 		C4FC991421F97276006A2DDD /* ShapeLayerWithPathView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeLayerWithPathView.h; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				C448D1F821F80871000AEE4B /* LaunchScreen.storyboard */,
 				C448D1FB21F80871000AEE4B /* Info.plist */,
 				C448D1FC21F80871000AEE4B /* main.m */,
+				C4FA9ED121FEE3AB00124342 /* DemoHeader.h */,
 				C448D22821F88366000AEE4B /* PathView */,
 			);
 			path = UIBezierPathDemo;
@@ -173,6 +178,8 @@
 				C4FC991821F995DC006A2DDD /* BasePathView.m */,
 				C4FC991A21F9C217006A2DDD /* HJPieChatView.h */,
 				C4FC991B21F9C217006A2DDD /* HJPieChatView.m */,
+				C4FA9ED221FEE6DE00124342 /* HJBrokenLineView.h */,
+				C4FA9ED321FEE6DE00124342 /* HJBrokenLineView.m */,
 			);
 			path = PathView;
 			sourceTree = "<group>";
@@ -313,6 +320,7 @@
 				C4FC991C21F9C217006A2DDD /* HJPieChatView.m in Sources */,
 				C448D1FD21F80871000AEE4B /* main.m in Sources */,
 				C448D22121F80BB0000AEE4B /* BezierPathDetailViewController.m in Sources */,
+				C4FA9ED421FEE6DE00124342 /* HJBrokenLineView.m in Sources */,
 				C4FC991621F97276006A2DDD /* ShapeLayerWithPathView.m in Sources */,
 				C448D1EF21F8086F000AEE4B /* AppDelegate.m in Sources */,
 				C4FC991321F95A56006A2DDD /* CurlLinePathView.m in Sources */,

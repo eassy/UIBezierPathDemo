@@ -50,6 +50,14 @@
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setSubViews];
+        [self setConstraints];
+    }
+    return self;
+}
+
 
 #pragma mark - privateMethods
 
@@ -62,14 +70,24 @@
 }
 
 
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    [self renderChat];
+}
+
+
 - (void)preDrawPieChat {
+    if (!_backLayer) {
+        [self setSubViews];
+        [self setConstraints];
+    }
     if (self.chatLayerArray.count < self.chatItems.count) {
         for (NSInteger i = self.chatLayerArray.count; i < self.chatItems.count ; i ++) {
             CAShapeLayer *itemShapeLayer = [[CAShapeLayer alloc] init];
             itemShapeLayer.lineWidth = 0.01f;
             itemShapeLayer.strokeColor = [UIColor clearColor].CGColor;
             [self.chatLayerArray addObject:itemShapeLayer];
-            [self.layer addSublayer:itemShapeLayer];
+            [self.backLayer addSublayer:itemShapeLayer];
         }
     }
     
@@ -157,6 +175,13 @@
         _chatLayerArray = [[NSMutableArray alloc] init];
     }
     return _chatLayerArray;
+}
+
+- (CALayer *)backLayer {
+    if (!_backLayer) {
+        _backLayer = [[CALayer alloc] init];
+    }
+    return _backLayer;
 }
 
 @end

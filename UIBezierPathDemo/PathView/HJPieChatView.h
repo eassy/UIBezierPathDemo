@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithRadius:(CGFloat)radius chatItems:(NSArray <HJPieChatItemModel *>*)chatItems frame:(CGRect)frame;
 
 /**
- 开始绘制图表
+ 开始绘制图表，最好设置好了 frame
  */
 - (void)renderChat;
 

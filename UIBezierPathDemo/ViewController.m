@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DemoHeader.h"
 #import "BezierPathDetailViewController.h"
 #import "BezierPathThirdViewController.h"
 
@@ -79,7 +80,8 @@
                            @"Create a Broken Path",
                            @"Create a CurlLine Path",
                            @"Path With ShapeLayer",
-                           @"Create a PieChat With BezierPath"];
+                           @"Create a PieChat With BezierPath",
+                           @"Create a BrokenPath Chat With BezierPath"];
     [self.items addObjectsFromArray:itemArray];
 }
 
@@ -116,7 +118,11 @@
     } else if (indexPath.row == 3) {
         pageType = BezierPathDetailTypeShapeLayer;
     } else if (indexPath.row == 4) {
-        BezierPathThirdViewController *thirdViewController = [[BezierPathThirdViewController alloc] init];
+        BezierPathThirdViewController *thirdViewController = [[BezierPathThirdViewController alloc] initWithTitle:[self.items objectAtIndex:indexPath.row] pageType:BezierPathDetailTypePieChat];
+        [self.navigationController pushViewController:thirdViewController animated:YES];
+        return;
+    } else if (indexPath.row == 5) {
+        BezierPathThirdViewController *thirdViewController = [[BezierPathThirdViewController alloc] initWithTitle:[self.items objectAtIndex:indexPath.row] pageType:BezierPathDetailTypeBrokenLineView];
         [self.navigationController pushViewController:thirdViewController animated:YES];
         return;
     }
